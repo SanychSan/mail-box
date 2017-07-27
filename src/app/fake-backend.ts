@@ -1,10 +1,10 @@
 import { Http, BaseRequestOptions, Response, ResponseOptions, RequestMethod } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
-export let fakeBackendProvider = {
+export const fakeBackendProvider = {
     // use fake backend in place of Http service for backend-less development
     provide: Http,
-    useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
+    useFactory(backend: MockBackend, options: BaseRequestOptions) {
         // configure fake backend
         backend.connections.subscribe((connection: MockConnection) => {
             const testUser = { username: 'test', password: 'test', firstName: 'Test', lastName: 'User' };
@@ -52,4 +52,4 @@ export let fakeBackendProvider = {
         return new Http(backend, options);
     },
     deps: [MockBackend, BaseRequestOptions]
-}
+};
