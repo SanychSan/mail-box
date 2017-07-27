@@ -1,0 +1,5 @@
+<ul class="nav nav-sidebar">
+  <li *ngFor="let folder of folders" [class.active]="folder.name === selectedFolder">
+     <a (click)="selectFolder(folder)"><!--<span class="badge pull-right">4</span>--> {{ folder.name }}</a>
+  </li>
+</ul>

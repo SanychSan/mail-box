@@ -1,0 +1,22 @@
+<ul class="nav nav-sidebar">
+  <li
+    *ngFor="let mail of mails | filter:term"
+    [class.active]="mail.id === selectedMail?.id"
+    [class.new-mail]="!mail.read"
+  >
+    <span
+      class="glyphicon check"
+      [class.glyphicon-unchecked]="!isChecked(mail)"
+      [class.glyphicon-check]="isChecked(mail)"
+      (click)="checkMail(mail)"
+      aria-hidden="true"
+    ></span>
+    <a (click)="selectMail(mail)">
+      <div class="clearfix">
+        <small class="pull-right">{{ mail.createdAt | date }}</small>
+        <span>{{ mail.subject }}</span>
+      </div>
+      {{ mail.from }}
+    </a>
+  </li>
+</ul>

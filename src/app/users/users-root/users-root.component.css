@@ -1,0 +1,31 @@
+.users, .new-user-line {
+  margin-top: 20px;
+}
+
+.users .row > div {
+  padding: 8px;
+}
+
+.users-row:nth-child(even) {
+  background-color: #2e3338;
+}
+
+.users-row:nth-child(odd) {
+  background-color: #353a41;
+}
+
+@media (min-width: 768px) {
+  .users {
+    display: table;
+    width: 100%;
+  }
+  .users .row {
+    display: table-row;
+  }
+  .users .row > div {
+    border-top: 1px solid #1c1e22;
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,47 @@
+<form class="user-form" [formGroup]="userForm">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="form-group"
+        [class.has-success]="userForm.controls.firstName.dirty && userForm.controls.firstName.valid"
+        [class.has-feedback]="userForm.controls.firstName.dirty"
+        [class.has-error]="userForm.controls.firstName.dirty && userForm.controls.firstName.invalid"
+      >
+        <input type="text" class="form-control" placeholder="First Name" formControlName="firstName">
+
+        <span *ngIf="userForm.controls.firstName.dirty && userForm.controls.firstName.valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+        <span *ngIf="userForm.controls.firstName.dirty && userForm.controls.firstName.invalid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group"
+        [class.has-success]="userForm.controls.lastName.dirty && userForm.controls.lastName.valid"
+        [class.has-feedback]="userForm.controls.lastName.dirty"
+        [class.has-error]="userForm.controls.lastName.dirty && userForm.controls.lastName.invalid"
+      >
+        <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName">
+
+        <span *ngIf="userForm.controls.lastName.dirty && userForm.controls.lastName.valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+        <span *ngIf="userForm.controls.lastName.dirty && userForm.controls.lastName.invalid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group"
+        [class.has-success]="userForm.controls.email.dirty && userForm.controls.email.valid"
+        [class.has-feedback]="userForm.controls.email.dirty"
+        [class.has-error]="userForm.controls.email.dirty && userForm.controls.email.invalid"
+      >
+        <input type="email" class="form-control" placeholder="Email" formControlName="email">
+
+        <span *ngIf="userForm.controls.email.dirty && userForm.controls.email.valid" class="glyphicon glyphicon-ok form-control-feedback"></span>
+        <span *ngIf="userForm.controls.email.dirty && userForm.controls.email.invalid" class="glyphicon glyphicon-remove form-control-feedback"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-default pull-left" (click)="goBack()">Back</button>
+      <button type="submit" class="btn btn-success pull-right" (click)="save()">Save</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,19 @@
+<div class="row new-user-line">
+  <div class="col-xs-12">
+    <button type="button" class="btn btn-default pull-right" (click)="addNewUser()">Add New User</button>
+  </div>
+</div>
+
+<div class="users">
+  <div class="row users-row" *ngFor="let user of users">
+    <div class="col-sm-3 col-xs-12">{{ user.firstName }}</div>
+    <div class="col-sm-3 col-xs-12">{{ user.lastName }}</div>
+    <div class="col-sm-3 col-xs-12">{{ user.email }}</div>
+    <div class="col-sm-3 col-xs-12">
+      <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default" (click)="edit(user)">Edit</button>
+        <button type="button" class="btn btn-default" (click)="remove(user)">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.nav-sidebar {
+  margin-right: -20px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.nav-sidebar a:hover {
+  background-color: #313539;
+}
+
+.nav-sidebar .active,
+.nav-sidebar .active a:hover {
+  background-color: #3e444c;
+}
+
+.nav a {
+  cursor: pointer;
+}

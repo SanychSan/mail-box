@@ -1,0 +1,56 @@
+.panel-manage {
+  margin-bottom: 20px;
+}
+
+.panel-manage .form-inline {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.sidebar::-webkit-scrollbar, .mailbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track, .mailbar::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.sidebar::-webkit-scrollbar-thumb, .mailbar::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+.btn-group {
+  z-index: 1049;
+}
+
+.dropdown-menu a {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .managebar {
+    padding-top: 18px;
+    border-bottom: 1px solid #555;
+  }
+  .cell {
+    padding-top: 18px;
+    border-bottom: 1px solid #555;
+    border-right: 1px solid #555;
+  }
+  .sidebar, .mailbar {
+    position: fixed;
+    top: 130px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*background-color: #333;*/
+    border-right: 1px solid #555;
+  }
+  .main {
+    padding-top: 15px;
+  }
+}
